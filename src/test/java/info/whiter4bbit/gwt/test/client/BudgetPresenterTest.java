@@ -83,7 +83,7 @@ public class BudgetPresenterTest {
         expect(viewMock.getAddButton()).andReturn(mockAddButton);
         expect(viewMock.showExpensePanel()).andReturn(expensePanel);
 
-        dataProvider.add(new Expense("Some description", "", 8989f));
+        dataProvider.add(new Expense("Some description", "", 8989f)); expectLastCall();
 
         replay(viewMock);
         replay(dataProvider);
@@ -93,6 +93,7 @@ public class BudgetPresenterTest {
         expensePanel.addExpense("8989.0", "Some description");
 
         verify(viewMock);
+	verify(dataProvider);	
     }
     
 }
