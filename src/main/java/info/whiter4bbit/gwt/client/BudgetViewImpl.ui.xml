@@ -1,0 +1,9 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:cellview="urn:import:com.google.gwt.user.cellview.client">
+    <g:VerticalPanel>
+        <g:Button text="Add expense" ui:field="addExpense"/>
+        <cellview:CellTable ui:field="cellTable">
+        </cellview:CellTable>
+    </g:VerticalPanel>
+</ui:UiBinder>
